@@ -148,8 +148,80 @@ main .card .form button:hover {
     transform: translateY(-50%) scale(1.15);
 }
 
-main>img {
-    height: 100%;
-    width: 40%;
+main .img-hero {
+    background-image: url('./images/hero-desktop.jpg');
+    height: 100vh;
+    background-size: cover;
     object-fit: cover;
+    width: 40%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:425px) {
+    main {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    main .card,
+    main .img-hero {
+        width: 100%;
+    }
+
+    main .img-hero {
+        background-image: url('./images/hero-mobile.jpg');
+        margin-top: 6.5rem;
+        height: 270px;
+    }
+
+    main .card .head-card,
+    main .card .body-card {
+        width: 100%;
+    }
+
+    main .card .head-card {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        background-color: white;
+        padding: 35px 0;
+    }
+
+    main .card .head-card>img {
+        margin-left: 40px;
+    }
+
+    main .card .body-card h1 {
+        letter-spacing: 13px;
+        text-align: center;
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    main .card .body-card p {
+        text-align: center;
+        width: 85%;
+        padding: 20px 0 20px;
+        margin: 0 auto;
+    }
+
+    main .card .body-card .form {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    main .card .form input {
+        padding: 20px 30px;
+    }
+
+    main .card .form input::placeholder {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    main .card .form button {
+        top: 1.8rem;
+        padding: 16px;
+        width: 20%;
+    }
 }
